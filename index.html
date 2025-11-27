@@ -1,19 +1,181 @@
----
-title: "Your Name"
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manan Agarwal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Academic homepage of Manan Agarwal." />
 
-# Your Name
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-I am a [your position] at [affiliation].  
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
 
-- Email: you@uni.edu  
-- GitHub: [github.com/your-username](https://github.com/your-username)  
+    <!-- Header -->
+    <header class="header">
+      <div class="header-main">
+        <h1 class="name">Manan Agarwal</h1>
+        <p class="tagline">
+          MS in Machine Learning, Carnegie Mellon University
+        </p>
+        <p class="meta">
+          Email: <a href="mailto:you@uni.edu">you@uni.edu</a> ·
+          GitHub: <a href="https://github.com/mananag007" target="_blank">mananag007</a> ·
+          Google Scholar: <a href="#" target="_blank">link</a>
+        </p>
+        <p class="buttons">
+          <a class="btn" href="cv.pdf" target="_blank">Download CV</a>
+        </p>
+      </div>
+      <!-- Optional photo -->
+      <!--
+      <div class="avatar-wrapper">
+        <img class="avatar" src="photo.jpg" alt="Photo of Manan Agarwal" />
+      </div>
+      -->
+    </header>
 
-## Research
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#misc">Misc</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-Short paragraph about what you work on.
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        I am a graduate student in the <a href="https://www.ml.cmu.edu/" target="_blank">Machine Learning Department</a> at Carnegie Mellon University.
+        I am broadly interested in machine learning and artificial intelligence, with a focus on diffusion models, language models, and reinforcement learning.
+      </p>
+      <p>
+        Currently, I work on <strong>[short research summary]</strong> with <strong>[advisor / group]</strong>.
+        Previously, I completed my B.Tech in Computer Science at IIT Bombay and worked at <strong>[company / lab]</strong>.
+      </p>
+    </section>
 
-## Publications
+    <!-- Research -->
+    <section id="research" class="section">
+      <h2>Research</h2>
+      <p class="lead">
+        My recent work focuses on diffusion-based generative models, discrete diffusion for language, and learning policies for decision-making.
+      </p>
+      <ul>
+        <li>
+          <strong>Diffusion language models.</strong>
+          Studying conditional structure, parallel decoding, and joint-token compatibility in diffusion-based text generation.
+        </li>
+        <li>
+          <strong>Reinforcement learning & control.</strong>
+          Off-policy optimization of generative policies and model-based control for robotics.
+        </li>
+        <li>
+          <strong>Foundations of generative modeling.</strong>
+          Connections between diffusion, flow models, and autoregressive modeling.
+        </li>
+      </ul>
+    </section>
 
-- Paper 1
-- Paper 2
+    <!-- Publications -->
+    <section id="publications" class="section">
+      <h2>Publications</h2>
+
+      <p class="note">
+        *Authors are listed in alphabetical order unless otherwise noted.
+      </p>
+
+      <div class="pub">
+        <div class="pub-title">
+          Paper Title Goes Here
+        </div>
+        <div class="pub-authors">
+          <strong>Manan Agarwal</strong>, Author 2, Author 3
+        </div>
+        <div class="pub-venue">
+          Conference / Journal, Year
+        </div>
+        <div class="pub-links">
+          <a href="#" target="_blank">PDF</a>
+          <span>·</span>
+          <a href="#" target="_blank">Code</a>
+          <span>·</span>
+          <a href="#" target="_blank">BibTeX</a>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          Another Paper Title
+        </div>
+        <div class="pub-authors">
+          Author 1, <strong>Manan Agarwal</strong>, Author 3
+        </div>
+        <div class="pub-venue">
+          Workshop / arXiv, Year
+        </div>
+        <div class="pub-links">
+          <a href="#" target="_blank">PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching" class="section">
+      <h2>Teaching</h2>
+      <ul>
+        <li>
+          <strong>Course Name</strong>, Role, Institution, Term
+          <br />
+          Short description of what you did (tutorials, office hours, project mentoring, etc.).
+        </li>
+        <li>
+          <strong>Another Course</strong>, Role, Institution, Term
+        </li>
+      </ul>
+    </section>
+
+    <!-- Misc -->
+    <section id="misc" class="section">
+      <h2>Misc</h2>
+      <p>
+        Outside of research, I enjoy <strong>[hobbies]</strong>. I sometimes write about
+        learning, productivity, and research notes on <a href="#" target="_blank">my blog</a> (coming soon).
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        The best way to reach me is by email:
+        <a href="mailto:you@uni.edu">you@uni.edu</a>.
+      </p>
+      <p>
+        You can also find me on
+        <a href="https://github.com/mananag007" target="_blank">GitHub</a>
+        and
+        <a href="#" target="_blank">LinkedIn</a>.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Manan Agarwal</p>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
