@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Reading — Manan Agarwal</title>
+<style>
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .subtitle {
+    color: #888;
+    font-size: 0.95rem;
+    margin-top: -0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .year-heading {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Cambria, Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #000;
+    margin-top: 3rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .book-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .book-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .book-item:last-child {
+    border-bottom: none;
+  }
+
+  .book-title {
+    flex: 1;
+    font-size: 0.95rem;
+    color: #222;
+    min-width: 0;
+  }
+
+  .book-author {
+    font-size: 0.85rem;
+    color: #777;
+    flex-shrink: 0;
+    min-width: 140px;
+    text-align: right;
+  }
+
+  .book-rating {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .dots {
+    display: inline-flex;
+    gap: 2px;
+    align-items: center;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #aaa;
+    background: transparent;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .dot.filled {
+    background: green;
+    border-color: green;
+  }
+
+  .dot.half {
+    background: linear-gradient(to right, green 50%, transparent 50%);
+    border-color: green;
+  }
+
+  .score-label {
+    font-size: 0.78rem;
+    color: #999;
+    min-width: 2.2rem;
+    text-align: right;
+  }
+
+  @media (max-width: 540px) {
+    .book-author {
+      display: none;
+    }
+    .book-item {
+      gap: 0.5rem;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<a class="back-link" href="index.html">← back</a>
+
+<h1>reading</h1>
+
+<p class="subtitle">63 books read</p>
+
+<!-- 2026 -->
+<div class="year-heading">2026</div>
+<ul class="book-list">
+  <li class="book-item">
+    <span class="book-title">Mother Mary Comes to Me</span>
+    <span class="book-author">Arundhati Roy</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+      </span>
+      <span class="score-label">10.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Thinking, Fast and Slow</span>
+    <span class="book-author">Daniel Kahneman</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+</ul>
+
+<!-- 2025 -->
+<div class="year-heading">2025</div>
+<ul class="book-list">
+  <li class="book-item">
+    <span class="book-title">The Song of Achilles</span>
+    <span class="book-author">Madeline Miller</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span>
+      </span>
+      <span class="score-label">9.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Pachinko</span>
+    <span class="book-author">Min Jin Lee</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Four Thousand Weeks</span>
+    <span class="book-author">Oliver Burkeman</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">7.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Eat Pray Love</span>
+    <span class="book-author">Elizabeth Gilbert</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Men Without Women</span>
+    <span class="book-author">Haruki Murakami</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Almanack of Naval Ravikant</span>
+    <span class="book-author">Eric Jorgenson</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">7.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Think Like a Monk</span>
+    <span class="book-author">Jay Shetty</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Deathly Hallows</span>
+    <span class="book-author">J.K. Rowling</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Half-Blood Prince</span>
+    <span class="book-author">J.K. Rowling</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+      </span>
+      <span class="score-label">10.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Order of the Phoenix</span>
+    <span class="book-author">J.K. Rowling</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Goblet of Fire</span>
+    <span class="book-author">J.K. Rowling</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Prisoner of Azkaban</span>
+    <span class="book-author">J.K. Rowling</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Looking for Alaska</span>
+    <span class="book-author">John Green</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Vegetarian</span>
+    <span class="book-author">Han Kang</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Chamber of Secrets</span>
+    <span class="book-author">J.K. Rowling</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Philosopher's Stone</span>
+    <span class="book-author">J.K. Rowling</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Book of Joy</span>
+    <span class="book-author">Douglas Abrams</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+      </span>
+      <span class="score-label">10.0</span>
+    </span>
+  </li>
+</ul>
+
+<!-- 2024 -->
+<div class="year-heading">2024</div>
+<ul class="book-list">
+  <li class="book-item">
+    <span class="book-title">The Shining</span>
+    <span class="book-author">Stephen King</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Norse Mythology</span>
+    <span class="book-author">Neil Gaiman</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">My Experiments with Truth</span>
+    <span class="book-author">Mahatma Gandhi</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Hunger Games</span>
+    <span class="book-author">Suzanne Collins</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">7.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Life of Pi</span>
+    <span class="book-author">Yann Martel</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">7.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Book Thief</span>
+    <span class="book-author">Markus Zusak</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">1984</span>
+    <span class="book-author">George Orwell</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Six of Crows</span>
+    <span class="book-author">Leigh Bardugo</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Kite Runner</span>
+    <span class="book-author">Khaled Hosseini</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span>
+      </span>
+      <span class="score-label">9.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">A Thousand Splendid Suns</span>
+    <span class="book-author">Khaled Hosseini</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+      </span>
+      <span class="score-label">10.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Brave New World</span>
+    <span class="book-author">Aldous Huxley</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Last Olympian</span>
+    <span class="book-author">Rick Riordan</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Battle of the Labyrinth</span>
+    <span class="book-author">Rick Riordan</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span>
+      </span>
+      <span class="score-label">9.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Titan's Curse</span>
+    <span class="book-author">Rick Riordan</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Sea of Monsters</span>
+    <span class="book-author">Rick Riordan</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Lightning Thief</span>
+    <span class="book-author">Rick Riordan</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Man's Search for Meaning</span>
+    <span class="book-author">Viktor Frankl</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Bell Jar</span>
+    <span class="book-author">Sylvia Plath</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+</ul>
+
+<!-- 2023 -->
+<div class="year-heading">2023</div>
+<ul class="book-list">
+  <li class="book-item">
+    <span class="book-title">Tuesdays with Morrie</span>
+    <span class="book-author">Mitch Albom</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">7.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">A Man Called Ove</span>
+    <span class="book-author">Fredrik Backman</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+      </span>
+      <span class="score-label">10.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Catcher in the Rye</span>
+    <span class="book-author">J.D. Salinger</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+      </span>
+      <span class="score-label">10.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Metamorphosis</span>
+    <span class="book-author">Franz Kafka</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Before the Coffee Gets Cold</span>
+    <span class="book-author">Toshikazu Kawaguchi</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Norwegian Wood</span>
+    <span class="book-author">Haruki Murakami</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span>
+      </span>
+      <span class="score-label">9.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Sapiens: A Brief History of Humankind</span>
+    <span class="book-author">Yuval Noah Harari</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+      </span>
+      <span class="score-label">10.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Bhagavad Gita</span>
+    <span class="book-author">Vyasa</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Pride and Prejudice</span>
+    <span class="book-author">Jane Austen</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Great Gatsby</span>
+    <span class="book-author">F. Scott Fitzgerald</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span>
+      </span>
+      <span class="score-label">9.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Frankenstein</span>
+    <span class="book-author">Mary Shelley</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">And Then There Were None</span>
+    <span class="book-author">Agatha Christie</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Murder of Roger Ackroyd</span>
+    <span class="book-author">Agatha Christie</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+      </span>
+      <span class="score-label">10.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">100 Selected Poems</span>
+    <span class="book-author">Emily Dickinson</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Murder on the Orient Express</span>
+    <span class="book-author">Agatha Christie</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Peril at End House</span>
+    <span class="book-author">Agatha Christie</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Meditations</span>
+    <span class="book-author">Marcus Aurelius</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">6.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">All-Star Superman</span>
+    <span class="book-author">Grant Morrison</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Verity</span>
+    <span class="book-author">Colleen Hoover</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">6.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Hitchhiker's Guide to the Galaxy</span>
+    <span class="book-author">Douglas Adams</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">7.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">To Kill a Mockingbird</span>
+    <span class="book-author">Harper Lee</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+      </span>
+      <span class="score-label">10.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">Animal Farm</span>
+    <span class="book-author">George Orwell</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">9.0</span>
+    </span>
+  </li>
+</ul>
+
+<!-- 2019 -->
+<div class="year-heading">2019</div>
+<ul class="book-list">
+  <li class="book-item">
+    <span class="book-title">The Invisible Man</span>
+    <span class="book-author">H.G. Wells</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Fault in Our Stars</span>
+    <span class="book-author">John Green</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.5</span>
+    </span>
+  </li>
+  <li class="book-item">
+    <span class="book-title">The Alchemist</span>
+    <span class="book-author">Paulo Coelho</span>
+    <span class="book-rating">
+      <span class="dots">
+        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+      </span>
+      <span class="score-label">8.0</span>
+    </span>
+  </li>
+</ul>
+
+<footer>
+Template from
+(<a href="https://github.com/rishabh-ranjan/rishabh-ranjan.github.io">source</a>).
+</footer>
+
+<br>
+<br>
+<br>
+
+</body>
+
+</html>
