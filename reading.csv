@@ -1,75 +1,63 @@
-Name,Author,Finished,Score,Started,Status
-Animal Farm,George Orwell,"February 18, 2023",9.0,"February 15, 2023",Done
-To Kill a Mockingbird,Harper Lee,"November 30, 2022",10.0,"November 3, 2022",Done
-The Hitchhiker’s Guide to Galaxy,Douglas Adams,"January 31, 2023",7.5,"January 25, 2023",Done
-Verity,Colleen Hoover,"February 20, 2023",6.0,"February 19, 2023",Done
-All-Star Superman,Grant Morrison,"February 4, 2023",8.5,"February 3, 2023",Done
-50 Greatest Short Stories,Rupa Publications,,,"February 23, 2023",In progress
-Letters from a Stoic,Seneca,,,"December 11, 2022",In progress
-How to win friends and influence peole,Dale Carnegie,,,"February 1, 2023",In progress
-Meditations,Marcus Aurelius,"March 10, 2023",6.5,"February 28, 2023",Done
-Peril at the End House,Agatha Christie,"April 4, 2023",9.0,"March 30, 2023",Done
-Murder on the Orient Express,Agatha Christie,"April 13, 2023",8.5,"April 10, 2023",Done
-100 Selected Poems,Emily Dickinson,"April 17, 2023",9.0,"April 14, 2023",Done
-The Murder of Roger Ackroyd,Agatha Christie,"May 7, 2023",10.0,"April 20, 2023",Done
-And Then There Were None,Agatha Christie,"May 13, 2023",9.0,"May 8, 2023",Done
-Django Unchanged,,,,,To Read
-Frankenstein,Mary Shelley,"May 26, 2023",8.5,"May 21, 2023",Done
-The Great Gatsby,F. Scott Fitzgerald,"May 19, 2023",9.5,"May 16, 2023",Done
-1984,George Orwell,,,,To Read
-The Alchemist,Paulo Coelho,"August 9, 2019",8.0,"August 5, 2019",Done
-The Fault in our Stars,John Green,"August 20, 2019",8.5,"August 15, 2019",Done
-Pride & Prejudice,Jane Austen,"August 1, 2023",8.0,"May 28, 2023",Done
-Bhagavad Gita,Vyasa,"May 31, 2023",8.0,"May 31, 2023",Done
-Sapiens: A Brief History of Humankind,Yuval Noah,"September 22, 2023",10.0,"June 14, 2023",Done
-Six of Crows,Leigh Bardugo,,,,To Read
-Norwegian Wood,Haruki Murakami,"August 27, 2023",9.5,"August 5, 2023",Done
-The Book Thief,Markus Zusak,,,,To Read
-Before the Coffee Gets Cold,Toshikazu Kawaguchi,"October 15, 2023",8.5,"September 28, 2023",Done
-The Picture of Dorian Gray,Oscar Wilde,,,"September 24, 2023",In progress
-The Metamorphosis,Franz Kafka,"October 28, 2023",9.0,"October 17, 2023",Done
-The Catcher in the Rye,J.D. Salinger,"November 13, 2023",10.0,"November 4, 2023",Done
-50 Greatest Love Stories,Rupa Publications,,,"November 20, 2023",In progress
-A Man Called Ove,"Fredrik Backman ","December 12, 2023",10.0,"November 26, 2023",Done
-The Bell Jar,Sylvia Plath,,,,To Read
-Tuesdays with Morrie,Mitch Albom,"December 20, 2023",7.5,"December 16, 2023",Done
-40 Rules of Love,Elif Shafak,"March 4, 2024",,"December 23, 2023",In progress
-The Bell Jar,Sylvia Plath,"January 7, 2024",8.5,"December 30, 2023",Done
-Man’s Search for Meaning,Victor Frankl,"January 16, 2024",8.5,"January 10, 2024",Done
-The Lightning Thief,Rick Riordan,"January 25, 2024",9.0,"January 17, 2024",Done
-The Sea of Monsters,Rick Riordan,"February 3, 2024",8.0,"January 25, 2024",Done
-Titan’s Curse,Rick Riordan,"February 17, 2024",8.5,"February 4, 2024",Done
-The Battle of Labyrinth,Rick Riordan,"March 4, 2024",9.5,"February 18, 2024",Done
-The Last Olympian,Rick Riordan,"March 19, 2024",9.0,"March 5, 2024",Done
-Catch 22,,,,,In progress
-Brave New World,Aldous Huxley,"March 26, 2024",8.0,"March 24, 2024",Done
-A Thousand Splendid Suns,"Khaled Hosseini ","April 9, 2024",10.0,"March 27, 2024",Done
-Kite Runner,Khaled Hosseini,"April 25, 2024",9.5,"April 10, 2024",Done
-Six of Crows,Leigh Bardugo,"May 24, 2024",8.5,"April 26, 2024",Done
-1984,George Orwell,"June 26, 2024",8.5,"May 25, 2024",Done
-The Book Thief,Markus Zusak,"July 11, 2024",9.0,"June 28, 2024",Done
-The Invisible Man,H.G. Wells,"May 13, 2019",8.0,"February 13, 2019",Done
-Life of Pi,Yann Martel,"August 2, 2024",7.5,"July 12, 2024",Done
-Hunger Games,"Suzanne Collins ","September 27, 2024",7.0,"September 16, 2024",Done
-My Experiments with Truth,Mahatma Gandhi,"October 19, 2024",8.0,"September 28, 2024",Done
-Norse Mythology,Neil Gaiman,"October 25, 2024",8.5,"October 20, 2024",Done
-The Shining,Stephen King,"December 29, 2024",8.5,"November 18, 2024",Done
-The Book of Joy,Douglas Abrams,"February 12, 2025",10.0,"December 15, 2024",Done
-The Philosopher’s Stone,J.K. Rowling,"January 28, 2025",8.0,"January 13, 2025",Done
-The Chamber of Secrets,J.K. Rowling,"March 14, 2025",8.0,"February 13, 2025",Done
-The Vegetarian,Han Kang,"March 22, 2025",9.0,"March 15, 2025",Done
-Looking For Alaska,John Green,"April 20, 2025",8.5,"March 25, 2025",Done
-Prisoner of Askaban,J.K. Rowling,"May 7, 2025",9.0,"April 21, 2025",Done
-The Goblet of Fire,J.K. Rowling,"May 28, 2025",9.0,"May 10, 2025",Done
-Order of the Phoenix,J.K. Rowling,"June 15, 2025",8.0,"May 29, 2025",Done
-The Half-Blood Prince,J.K. Rowling,"July 2, 2025",10.0,"June 16, 2025",Done
-The Deathly Hallows,J.K. Rowling,"July 17, 2025",9.0,"July 3, 2025",Done
-Think Like A Monk,Jay Shetty,"August 18, 2025",8.0,"July 21, 2025",Done
-The Almanack Of Naval Ravikant,Eric Jorgenson,"September 2, 2025",7.5,"August 19, 2025",Done
-Men Without Women,Haruki Murakami,"September 23, 2025",9.0,"September 3, 2025",Done
-Eat Pray Love,Elizabeth Gilbert,"October 20, 2025",8.5,"September 24, 2025",Done
-Four Thousand Weeks,Oliver Burkeman,"November 20, 2025",7.5,"October 21, 2025",Done
-Pachinko,Min Jin Lee,"December 15, 2025",9.0,"November 16, 2025",Done
-The Song of Achilles,Madeline Miller,"December 31, 2025",9.5,"December 16, 2025",Done
-"Thinking, Fast and Slow",Daniel Kahneman,"March 1, 2026",9.0,"January 15, 2026",Done
-Mother Mary Comes to Me,Arundhati Roy,"March 15, 2026",10.0,"March 2, 2026",Done
+Name,Author,Finished,Score
+Animal Farm,George Orwell,"February 18, 2023",9.0
+To Kill a Mockingbird,Harper Lee,"November 30, 2022",10.0
+The Hitchhiker's Guide to Galaxy,Douglas Adams,"January 31, 2023",7.5
+Verity,Colleen Hoover,"February 20, 2023",6.0
+All-Star Superman,Grant Morrison,"February 4, 2023",8.5
+Meditations,Marcus Aurelius,"March 10, 2023",6.5
+Peril at the End House,Agatha Christie,"April 4, 2023",9.0
+Murder on the Orient Express,Agatha Christie,"April 13, 2023",8.5
+100 Selected Poems,Emily Dickinson,"April 17, 2023",9.0
+The Murder of Roger Ackroyd,Agatha Christie,"May 7, 2023",10.0
+And Then There Were None,Agatha Christie,"May 13, 2023",9.0
+Frankenstein,Mary Shelley,"May 26, 2023",8.5
+The Great Gatsby,F. Scott Fitzgerald,"May 19, 2023",9.5
+The Alchemist,Paulo Coelho,"August 9, 2019",8.0
+The Fault in Our Stars,John Green,"August 20, 2019",8.5
+Pride & Prejudice,Jane Austen,"August 1, 2023",8.0
+Bhagavad Gita,Vyasa,"May 31, 2023",8.0
+Sapiens: A Brief History of Humankind,Yuval Noah Harari,"September 22, 2023",10.0
+Norwegian Wood,Haruki Murakami,"August 27, 2023",9.5
+Before the Coffee Gets Cold,Toshikazu Kawaguchi,"October 15, 2023",8.5
+The Metamorphosis,Franz Kafka,"October 28, 2023",9.0
+The Catcher in the Rye,J.D. Salinger,"November 13, 2023",10.0
+A Man Called Ove,Fredrik Backman,"December 12, 2023",10.0
+Tuesdays with Morrie,Mitch Albom,"December 20, 2023",7.5
+The Bell Jar,Sylvia Plath,"January 7, 2024",8.5
+Man's Search for Meaning,Viktor Frankl,"January 16, 2024",8.5
+The Lightning Thief,Rick Riordan,"January 25, 2024",9.0
+The Sea of Monsters,Rick Riordan,"February 3, 2024",8.0
+Titan's Curse,Rick Riordan,"February 17, 2024",8.5
+The Battle of the Labyrinth,Rick Riordan,"March 4, 2024",9.5
+The Last Olympian,Rick Riordan,"March 19, 2024",9.0
+Brave New World,Aldous Huxley,"March 26, 2024",8.0
+A Thousand Splendid Suns,Khaled Hosseini,"April 9, 2024",10.0
+Kite Runner,Khaled Hosseini,"April 25, 2024",9.5
+Six of Crows,Leigh Bardugo,"May 24, 2024",8.5
+1984,George Orwell,"June 26, 2024",8.5
+The Book Thief,Markus Zusak,"July 11, 2024",9.0
+The Invisible Man,H.G. Wells,"May 13, 2019",8.0
+Life of Pi,Yann Martel,"August 2, 2024",7.5
+Hunger Games,Suzanne Collins,"September 27, 2024",7.0
+My Experiments with Truth,Mahatma Gandhi,"October 19, 2024",8.0
+Norse Mythology,Neil Gaiman,"October 25, 2024",8.5
+The Shining,Stephen King,"December 29, 2024",8.5
+The Book of Joy,Douglas Abrams,"February 12, 2025",10.0
+The Philosopher's Stone,J.K. Rowling,"January 28, 2025",8.0
+The Chamber of Secrets,J.K. Rowling,"March 14, 2025",8.0
+The Vegetarian,Han Kang,"March 22, 2025",9.0
+Looking For Alaska,John Green,"April 20, 2025",8.5
+Prisoner of Azkaban,J.K. Rowling,"May 7, 2025",9.0
+The Goblet of Fire,J.K. Rowling,"May 28, 2025",9.0
+Order of the Phoenix,J.K. Rowling,"June 15, 2025",8.0
+The Half-Blood Prince,J.K. Rowling,"July 2, 2025",10.0
+The Deathly Hallows,J.K. Rowling,"July 17, 2025",9.0
+Think Like a Monk,Jay Shetty,"August 18, 2025",8.0
+The Almanack of Naval Ravikant,Eric Jorgenson,"September 2, 2025",7.5
+Men Without Women,Haruki Murakami,"September 23, 2025",9.0
+Eat Pray Love,Elizabeth Gilbert,"October 20, 2025",8.5
+Four Thousand Weeks,Oliver Burkeman,"November 20, 2025",7.5
+Pachinko,Min Jin Lee,"December 15, 2025",9.0
+The Song of Achilles,Madeline Miller,"December 31, 2025",9.5
+"Thinking, Fast and Slow",Daniel Kahneman,"March 1, 2026",9.0
+Mother Mary Comes to Me,Arundhati Roy,"March 15, 2026",10.0
