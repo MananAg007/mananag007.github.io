@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <title>Reading — Manan Agarwal</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌀</text></svg>">
 <style>
@@ -80,25 +81,17 @@
   }
 
   .star {
-    color: #ddd;
-    font-size: 1rem;
+    color: #e0e0e0;
+    font-size: 0.85rem;
     display: inline-block;
     position: relative;
+    opacity: 0.9;
   }
 
   .star.full {
     color: green;
   }
 
-  .star.half::before {
-    content: "★";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    overflow: hidden;
-    color: green;
-  }
 
   .score-label {
     font-size: 0.78rem;
@@ -174,9 +167,9 @@ function makeStars(score) {
   const hasHalf = (score % 1) >= 0.5;
   let html = '<span class="stars">';
   for (let i = 1; i <= 5; i++) {
-    if (i <= filled) html += '<span class="star full">★</span>';
-    else if (i === filled + 1 && hasHalf) html += '<span class="star half">★</span>';
-    else html += '<span class="star">★</span>';
+    if (i <= filled) html += '<i class="fas fa-star star full"></i>';
+    else if (i === filled + 1 && hasHalf) html += '<i class="fas fa-star-half-alt star half"></i>';
+    else html += '<i class="far fa-star star empty"></i>';
   }
   html += '</span>';
   return html;
