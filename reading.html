@@ -9,7 +9,7 @@
 <title>Reading — Manan Agarwal</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌀</text></svg>">
 <style>
-  body { max-width: 900px; }
+  body { max-width: 920px; }
 
   .back-link {
     display: inline-block;
@@ -54,7 +54,7 @@
   }
 
   .book-title-block {
-    flex: 1;
+    flex: 1.5;
     min-width: 0;
     display: flex;
     flex-direction: column;
@@ -108,12 +108,6 @@
     line-height: 1.4;
   }
 
-  .score-label {
-    font-size: 0.78rem;
-    color: #999;
-    min-width: 2.2rem;
-    text-align: right;
-  }
 
   @media (max-width: 620px) {
     .book-quote { display: none; }
@@ -243,7 +237,6 @@ fetch('reading.csv')
           '<span class="book-quote">' + (book.quote ? '“' + book.quote + '”' : '') + '</span>' +
           '<span class="book-rating">' +
             makeStars(book.score) +
-            '<span class="score-label">' + book.score.toFixed(1) + '</span>' +
           '</span>';
         ul.appendChild(li);
       });
