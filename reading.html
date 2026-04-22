@@ -2,6 +2,7 @@
 <html>
 
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <title>Reading — Manan Agarwal</title>
@@ -71,30 +72,32 @@
     gap: 0.35rem;
   }
 
-  .dots {
+  .stars {
     display: inline-flex;
-    gap: 2px;
+    gap: 1px;
     align-items: center;
+    line-height: 1;
   }
 
-  .dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    border: 1.5px solid #aaa;
-    background: transparent;
+  .star {
+    color: #ddd;
+    font-size: 1rem;
     display: inline-block;
-    flex-shrink: 0;
+    position: relative;
   }
 
-  .dot.filled {
-    background: green;
-    border-color: green;
+  .star.full {
+    color: green;
   }
 
-  .dot.half {
-    background: linear-gradient(to right, green 50%, transparent 50%);
-    border-color: green;
+  .star.half::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    overflow: hidden;
+    color: green;
   }
 
   .score-label {
@@ -166,14 +169,14 @@ function parseCSV(text) {
   return rows;
 }
 
-function makeDots(score) {
+function makeStars(score) {
   const filled = Math.floor(score);
   const hasHalf = (score % 1) >= 0.5;
-  let html = '<span class="dots">';
-  for (let i = 1; i <= 10; i++) {
-    if (i <= filled) html += '<span class="dot filled"></span>';
-    else if (i === filled + 1 && hasHalf) html += '<span class="dot half"></span>';
-    else html += '<span class="dot"></span>';
+  let html = '<span class="stars">';
+  for (let i = 1; i <= 5; i++) {
+    if (i <= filled) html += '<span class="star full">★</span>';
+    else if (i === filled + 1 && hasHalf) html += '<span class="star half">★</span>';
+    else html += '<span class="star">★</span>';
   }
   html += '</span>';
   return html;
@@ -230,7 +233,7 @@ fetch('reading.csv')
           '<span class="book-title">' + book.name + '</span>' +
           '<span class="book-author">' + book.author + '</span>' +
           '<span class="book-rating">' +
-            makeDots(book.score) +
+            makeStars(book.score) +
             '<span class="score-label">' + book.score.toFixed(1) + '</span>' +
           '</span>';
         ul.appendChild(li);
