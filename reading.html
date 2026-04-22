@@ -66,6 +66,23 @@
     color: #222;
   }
 
+  .book-crown {
+    flex-shrink: 0;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .crown {
+    color: #FFD700;
+    font-size: 0.75rem;
+    border: 1.5px solid #FFD700;
+    border-radius: 4px;
+    padding: 2px 3px;
+    line-height: 1;
+  }
+
   .book-author {
     font-size: 0.8rem;
     color: #999;
@@ -230,6 +247,7 @@ fetch('reading.csv')
         const li = document.createElement('li');
         li.className = 'book-item';
         li.innerHTML =
+          '<div class="book-crown">' + (book.score === 5 ? '<i class="fas fa-crown crown"></i>' : '') + '</div>' +
           '<div class="book-title-block">' +
             '<span class="book-title">' + book.name + '</span>' +
             '<span class="book-author">' + book.author + '</span>' +
