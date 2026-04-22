@@ -51,19 +51,22 @@
     border-bottom: none;
   }
 
-  .book-title {
+  .book-title-block {
     flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .book-title {
     font-size: 0.95rem;
     color: #222;
-    min-width: 0;
   }
 
   .book-author {
-    font-size: 0.85rem;
-    color: #777;
-    flex-shrink: 0;
-    min-width: 140px;
-    text-align: right;
+    font-size: 0.8rem;
+    color: #999;
   }
 
   .book-rating {
@@ -101,9 +104,6 @@
   }
 
   @media (max-width: 540px) {
-    .book-author {
-      display: none;
-    }
     .book-item {
       gap: 0.5rem;
     }
@@ -223,8 +223,10 @@ fetch('reading.csv')
         const li = document.createElement('li');
         li.className = 'book-item';
         li.innerHTML =
-          '<span class="book-title">' + book.name + '</span>' +
-          '<span class="book-author">' + book.author + '</span>' +
+          '<div class="book-title-block">' +
+            '<span class="book-title">' + book.name + '</span>' +
+            '<span class="book-author">' + book.author + '</span>' +
+          '</div>' +
           '<span class="book-rating">' +
             makeStars(book.score) +
             '<span class="score-label">' + book.score.toFixed(1) + '</span>' +
