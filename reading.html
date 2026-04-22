@@ -9,6 +9,8 @@
 <title>Reading — Manan Agarwal</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌀</text></svg>">
 <style>
+  body { max-width: 900px; }
+
   .back-link {
     display: inline-block;
     margin-bottom: 1rem;
@@ -41,9 +43,9 @@
 
   .book-item {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 0.75rem;
-    padding: 0.55rem 0;
+    padding: 0.65rem 0;
     border-bottom: 1px solid #f0f0f0;
   }
 
@@ -96,6 +98,16 @@
   }
 
 
+  .book-quote {
+    flex: 2;
+    font-size: 0.82rem;
+    color: #999;
+    font-style: italic;
+    min-width: 0;
+    padding: 0 0.5rem;
+    line-height: 1.4;
+  }
+
   .score-label {
     font-size: 0.78rem;
     color: #999;
@@ -103,10 +115,9 @@
     text-align: right;
   }
 
-  @media (max-width: 540px) {
-    .book-item {
-      gap: 0.5rem;
-    }
+  @media (max-width: 620px) {
+    .book-quote { display: none; }
+    .book-item { gap: 0.5rem; }
   }
 </style>
 </head>
@@ -185,6 +196,7 @@ fetch('reading.csv')
       author:   headers.indexOf('Author'),
       finished: headers.indexOf('Finished'),
       score:    headers.indexOf('Score'),
+      quote:    headers.indexOf('Quote'),
     };
 
     const done = rows.slice(1)
@@ -193,6 +205,7 @@ fetch('reading.csv')
         name:   r[idx.name],
         author: r[idx.author].trim(),
         score:  parseFloat(r[idx.score]),
+        quote:  idx.quote >= 0 ? (r[idx.quote] || '') : '',
         year:   new Date(r[idx.finished]).getFullYear(),
         date:   new Date(r[idx.finished]),
       }))
@@ -227,6 +240,7 @@ fetch('reading.csv')
             '<span class="book-title">' + book.name + '</span>' +
             '<span class="book-author">' + book.author + '</span>' +
           '</div>' +
+          '<span class="book-quote">' + (book.quote ? '“' + book.quote + '”' : '') + '</span>' +
           '<span class="book-rating">' +
             makeStars(book.score) +
             '<span class="score-label">' + book.score.toFixed(1) + '</span>' +
