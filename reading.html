@@ -65,13 +65,6 @@
     align-items: stretch;
   }
 
-  .month-group > .book-list {
-    border-bottom: 1px solid #f0f0f0;
-  }
-
-  .month-group:last-child > .book-list {
-    border-bottom: none;
-  }
 
   /* on wide screens, hang the month column in the left margin so the
      book rows keep the full page width (label 1.6rem + gap 1.1rem) */
@@ -132,23 +125,25 @@
     isolation: isolate;
   }
 
-  .book-item:last-child {
+  /* every divider belongs to the row above it (including the one between
+     months), so the cursor is always over some row and the tint never gaps */
+  .month-group:last-child .book-item:last-child {
     border-bottom: none;
   }
 
-  /* faint green tint behind the row under the cursor */
+  /* faint green tint behind the row under the cursor; it also covers the
+     row's own divider so neighbouring rows' tints meet with no gap */
   .book-item::before {
     content: '';
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: -1px;
     left: -0.6rem;
     right: -0.6rem;
     z-index: -1;
     border-radius: 6px;
     background: rgba(0, 128, 0, 0.045);
     opacity: 0;
-    transition: opacity 0.15s ease;
   }
 
   .book-item:hover::before {
