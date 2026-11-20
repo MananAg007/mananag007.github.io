@@ -242,6 +242,30 @@
     line-height: 1.4;
   }
 
+  /* serif quote marks, slightly larger and tinted; they don't change line height */
+  .qm {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: normal;
+    font-size: 1.3em;
+    line-height: 0;
+    vertical-align: -0.1em;
+    color: #b9cfb9;
+  }
+
+  /* hanging punctuation: the opening mark sits just outside the text's left edge */
+  .qm-open {
+    margin-left: -0.42em;
+    margin-right: 0.04em;
+  }
+
+  .qm-close {
+    margin-left: 0.04em;
+  }
+
+  .book-item:hover .qm {
+    color: green;
+  }
+
 
   @media (max-width: 620px) {
     .book-quote { display: none; }
@@ -390,7 +414,9 @@ fetch('reading.csv')
               '<span class="book-title">' + book.name + '</span>' +
               '<span class="book-author">' + book.author + '</span>' +
             '</div>' +
-            '<span class="book-quote">' + (book.quote ? '“' + book.quote + '”' : '') + '</span>' +
+            '<span class="book-quote">' + (book.quote
+              ? '<span class="qm qm-open">“</span>' + book.quote + '<span class="qm qm-close">”</span>'
+              : '') + '</span>' +
             '<span class="book-rating">' +
               makeStars(book.score) +
             '</span>';
