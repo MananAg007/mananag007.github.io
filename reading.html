@@ -29,13 +29,22 @@
     font-size: 1.5rem;
     font-weight: normal;
     color: #000;
-    margin-top: 3rem;
+    margin-top: 2.4rem;
     margin-bottom: 0.75rem;
+    padding-top: 0.6rem;
     padding-bottom: 0.3rem;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
+    /* stay pinned at the top while scrolling through the year */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+    /* also cover the margins, where month labels and stars hang */
+    box-shadow: -3rem 0 0 #fff, 2rem 0 0 #fff;
   }
 
   .year-count {
@@ -77,6 +86,11 @@
       margin-left: 1.5rem;
       margin-right: -1.5rem;
     }
+
+    /* stretch the hover tint to cover the stars too */
+    .book-list .book-item::before {
+      right: -2.1rem;
+    }
   }
 
   .month-label {
@@ -115,10 +129,30 @@
     gap: 0.75rem;
     padding: 0.65rem 0;
     border-bottom: 1px solid #f0f0f0;
+    isolation: isolate;
   }
 
   .book-item:last-child {
     border-bottom: none;
+  }
+
+  /* faint green tint behind the row under the cursor */
+  .book-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -0.6rem;
+    right: -0.6rem;
+    z-index: -1;
+    border-radius: 6px;
+    background: rgba(0, 128, 0, 0.045);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+
+  .book-item:hover::before {
+    opacity: 1;
   }
 
   .book-title-block {
@@ -323,12 +357,18 @@ fetch('reading.csv')
     const container = document.getElementById('reading-list');
 
     years.forEach(year => {
+      // each year is its own section, so its sticky heading is pushed
+      // off the top by the next year's heading
+      const section = document.createElement('section');
+      section.className = 'year-section';
+      container.appendChild(section);
+
       const heading = document.createElement('div');
       heading.className = 'year-heading';
       const n = byYear[year].length;
       heading.innerHTML = year +
         '<span class="year-count">' + n + (n === 1 ? ' book' : ' books') + '</span>';
-      container.appendChild(heading);
+      section.appendChild(heading);
 
       // group this year's books by month (books are already sorted newest first)
       const months = [];
@@ -341,36 +381,36 @@ fetch('reading.csv')
       });
 
       months.forEach(group => {
-      const wrap = document.createElement('div');
-      wrap.className = 'month-group';
+        const wrap = document.createElement('div');
+        wrap.className = 'month-group';
 
-      const ul = document.createElement('ul');
-      ul.className = 'book-list';
+        const ul = document.createElement('ul');
+        ul.className = 'book-list';
 
-      group.books.forEach(book => {
-        const li = document.createElement('li');
-        li.className = 'book-item';
-        li.innerHTML =
-          '<div class="book-title-block">' +
-            '<span class="book-title">' + book.name + '</span>' +
-            '<span class="book-author">' + book.author + '</span>' +
-          '</div>' +
-          '<span class="book-quote">' + (book.quote ? '“' + book.quote + '”' : '') + '</span>' +
-          '<span class="book-rating">' +
-            makeStars(book.score) +
-          '</span>';
-        ul.appendChild(li);
-      });
+        group.books.forEach(book => {
+          const li = document.createElement('li');
+          li.className = 'book-item';
+          li.innerHTML =
+            '<div class="book-title-block">' +
+              '<span class="book-title">' + book.name + '</span>' +
+              '<span class="book-author">' + book.author + '</span>' +
+            '</div>' +
+            '<span class="book-quote">' + (book.quote ? '“' + book.quote + '”' : '') + '</span>' +
+            '<span class="book-rating">' +
+              makeStars(book.score) +
+            '</span>';
+          ul.appendChild(li);
+        });
 
-      const label = document.createElement('div');
-      label.className = 'month-label';
-      const full = MONTHS[group.month];
-      label.innerHTML = '<span>' + full + '</span>';
-      label.dataset.short = full.slice(0, 3);
+        const label = document.createElement('div');
+        label.className = 'month-label';
+        const full = MONTHS[group.month];
+        label.innerHTML = '<span>' + full + '</span>';
+        label.dataset.short = full.slice(0, 3);
 
-      wrap.appendChild(label);
-      wrap.appendChild(ul);
-      container.appendChild(wrap);
+        wrap.appendChild(label);
+        wrap.appendChild(ul);
+        section.appendChild(wrap);
       });
     });
 
