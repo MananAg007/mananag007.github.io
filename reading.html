@@ -33,12 +33,79 @@
     margin-bottom: 0.75rem;
     padding-bottom: 0.3rem;
     border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .year-count {
+    font-size: 0.85rem;
+    color: #999;
   }
 
   .book-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .month-group {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .month-group > .book-list {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .month-group:last-child > .book-list {
+    border-bottom: none;
+  }
+
+  /* on wide screens, hang the month column in the left margin so the
+     book rows keep the full page width (label 1.6rem + gap 1.1rem) */
+  @media (min-width: 1020px) {
+    .month-group {
+      margin-left: -2.7rem;
+    }
+
+    /* push the stars right into the margin: the gap before them is
+       balanced by the negative right margin, so quotes keep their width */
+    .book-item .book-rating {
+      margin-left: 1.5rem;
+      margin-right: -1.5rem;
+    }
+  }
+
+  .month-label {
+    flex-shrink: 0;
+    width: 1.6rem;
+    margin: 0.45rem 1.1rem 0.45rem 0;
+    border-right: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .month-label span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg); /* read bottom-to-top, facing the books */
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    color: #aaa;
+    white-space: nowrap;
+  }
+
+  .month-group:hover .month-label {
+    border-right-color: green;
+  }
+
+  .month-group:hover .month-label span {
+    color: green;
   }
 
   .book-item {
@@ -67,19 +134,6 @@
     color: #222;
   }
 
-  .book-crown {
-    position: absolute;
-    left: -22px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .crown {
-    color: #FFD700;
-    font-size: 0.8rem;
-    -webkit-text-stroke: 1px #000;
-    paint-order: stroke fill;
-  }
 
   .book-author {
     font-size: 0.8rem;
@@ -88,6 +142,7 @@
 
   .book-rating {
     flex-shrink: 0;
+    margin-left: 0.75rem;
     display: flex;
     align-items: center;
     gap: 0.35rem;
@@ -111,6 +166,40 @@
   .star.full,
   .star.half {
     color: green;
+  }
+
+  /* 5-star books: gold stars with a soft glow, shimmer on hover */
+  .stars.perfect {
+    filter: drop-shadow(0 0 3px rgba(255, 185, 0, 0.55));
+  }
+
+  .stars.perfect .star {
+    opacity: 1;
+    color: transparent;
+    background: linear-gradient(110deg,
+      #d99a00 0%, #ffc400 35%, #fff4b8 50%, #ffc400 65%, #d99a00 100%);
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .book-item:hover .stars.perfect .star {
+    animation: shimmer 0.9s ease-in-out;
+  }
+
+  .book-item:hover .stars.perfect .star:nth-child(2) { animation-delay: 0.06s; }
+  .book-item:hover .stars.perfect .star:nth-child(3) { animation-delay: 0.12s; }
+  .book-item:hover .stars.perfect .star:nth-child(4) { animation-delay: 0.18s; }
+  .book-item:hover .stars.perfect .star:nth-child(5) { animation-delay: 0.24s; }
+
+  @keyframes shimmer {
+    from { background-position: 100% 0; }
+    to   { background-position: 0% 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .book-item:hover .stars.perfect .star { animation: none; }
   }
 
 
@@ -186,7 +275,7 @@ function parseCSV(text) {
 function makeStars(score) {
   const filled = Math.floor(score);
   const hasHalf = (score % 1) >= 0.5;
-  let html = '<span class="stars">';
+  let html = score === 5 ? '<span class="stars perfect" title="favourite">' : '<span class="stars">';
   for (let i = 1; i <= 5; i++) {
     if (i <= filled) html += '<i class="fas fa-star star full"></i>';
     else if (i === filled + 1 && hasHalf) html += '<i class="fas fa-star-half-alt star half"></i>';
@@ -236,17 +325,32 @@ fetch('reading.csv')
     years.forEach(year => {
       const heading = document.createElement('div');
       heading.className = 'year-heading';
-      heading.textContent = year;
+      const n = byYear[year].length;
+      heading.innerHTML = year +
+        '<span class="year-count">' + n + (n === 1 ? ' book' : ' books') + '</span>';
       container.appendChild(heading);
+
+      // group this year's books by month (books are already sorted newest first)
+      const months = [];
+      byYear[year].forEach(book => {
+        const m = book.date.getMonth();
+        if (!months.length || months[months.length - 1].month !== m) {
+          months.push({ month: m, books: [] });
+        }
+        months[months.length - 1].books.push(book);
+      });
+
+      months.forEach(group => {
+      const wrap = document.createElement('div');
+      wrap.className = 'month-group';
 
       const ul = document.createElement('ul');
       ul.className = 'book-list';
 
-      byYear[year].forEach(book => {
+      group.books.forEach(book => {
         const li = document.createElement('li');
         li.className = 'book-item';
         li.innerHTML =
-          '<div class="book-crown">' + (book.score === 5 ? '<i class="fas fa-crown crown"></i>' : '') + '</div>' +
           '<div class="book-title-block">' +
             '<span class="book-title">' + book.name + '</span>' +
             '<span class="book-author">' + book.author + '</span>' +
@@ -258,9 +362,36 @@ fetch('reading.csv')
         ul.appendChild(li);
       });
 
-      container.appendChild(ul);
+      const label = document.createElement('div');
+      label.className = 'month-label';
+      const full = MONTHS[group.month];
+      label.innerHTML = '<span>' + full + '</span>';
+      label.dataset.short = full.slice(0, 3);
+
+      wrap.appendChild(label);
+      wrap.appendChild(ul);
+      container.appendChild(wrap);
+      });
     });
+
+    fitMonthLabels();
+    window.addEventListener('resize', fitMonthLabels);
   });
+
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+  'August', 'September', 'October', 'November', 'December'];
+
+// use the 3-letter month name wherever the full name is taller than its group of books
+function fitMonthLabels() {
+  document.querySelectorAll('.month-label').forEach(label => {
+    const span = label.firstChild;
+    if (!label.dataset.full) label.dataset.full = span.textContent;
+    span.textContent = label.dataset.full;
+    if (span.offsetHeight > label.clientHeight - 8) {
+      span.textContent = label.dataset.short;
+    }
+  });
+}
 </script>
 
 </body>
